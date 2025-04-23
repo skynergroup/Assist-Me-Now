@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import {
   HomeIcon,
@@ -8,7 +9,7 @@ import {
   TruckIcon,
   ChartBarIcon,
   Cog6ToothIcon,
-  ArrowLeftOnRectangleIcon,
+  ArrowRightStartOnRectangleIcon,
   Bars3Icon,
   XMarkIcon
 } from '@heroicons/react/24/outline';
@@ -66,7 +67,15 @@ const Sidebar = () => {
         <div className="flex-1 flex flex-col min-h-0 bg-gray-800">
           <div className="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
             <div className="flex items-center flex-shrink-0 px-4">
-              <h1 className="text-white text-xl font-bold">Assist Me Now</h1>
+              <div className="flex items-center">
+                <Image
+                  src="/images/assist-me-now-logo.png"
+                  alt="Assist Me Now Logo"
+                  width={150}
+                  height={100}
+                  className="mr-2"
+                />
+              </div>
             </div>
             <nav className="mt-5 flex-1 px-2 space-y-1">
               {navigation.map((item) => {
@@ -78,8 +87,8 @@ const Sidebar = () => {
                     className={`
                       group flex items-center px-2 py-2 text-sm font-medium rounded-md
                       ${isActive
-                        ? 'bg-gray-900 text-white'
-                        : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                        ? 'bg-[#003A5D] text-white'
+                        : 'text-gray-300 hover:bg-[#003A5D] hover:text-white'
                       }
                     `}
                   >
@@ -122,7 +131,7 @@ const Sidebar = () => {
               onClick={handleSignOut}
               className="flex items-center text-gray-300 hover:text-white w-full"
             >
-              <ArrowLeftOnRectangleIcon className="h-5 w-5 mr-2" />
+              <ArrowRightStartOnRectangleIcon className="h-5 w-5 mr-2" />
               <span>Sign Out</span>
             </button>
           </div>
@@ -146,7 +155,15 @@ const Sidebar = () => {
             </div>
             <div className="flex-1 h-0 pt-5 pb-4 overflow-y-auto">
               <div className="flex-shrink-0 flex items-center px-4">
-                <h1 className="text-white text-xl font-bold">Assist Me Now</h1>
+                <div className="flex items-center">
+                  <Image
+                    src="/images/assist-me-now-logo.png"
+                    alt="Assist Me Now Logo"
+                    width={120}
+                    height={80}
+                    className="mr-2"
+                  />
+                </div>
               </div>
               <nav className="mt-5 px-2 space-y-1">
                 {navigation.map((item) => {
@@ -158,8 +175,8 @@ const Sidebar = () => {
                       className={`
                         group flex items-center px-2 py-2 text-base font-medium rounded-md
                         ${isActive
-                          ? 'bg-gray-900 text-white'
-                          : 'text-gray-300 hover:bg-gray-700 hover:text-white'
+                          ? 'bg-[#003A5D] text-white'
+                          : 'text-gray-300 hover:bg-[#003A5D] hover:text-white'
                         }
                       `}
                       onClick={toggleMobileMenu}
@@ -203,7 +220,7 @@ const Sidebar = () => {
                 onClick={handleSignOut}
                 className="flex items-center text-gray-300 hover:text-white w-full"
               >
-                <ArrowLeftOnRectangleIcon className="h-5 w-5 mr-2" />
+                <ArrowRightStartOnRectangleIcon className="h-5 w-5 mr-2" />
                 <span>Sign Out</span>
               </button>
             </div>

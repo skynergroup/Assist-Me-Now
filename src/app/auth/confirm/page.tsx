@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
@@ -65,7 +66,16 @@ const ConfirmPage: React.FC = () => {
       <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <div>
-            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+            <div className="flex justify-center">
+              <Image
+                src="/images/assist-me-now-logo.png"
+                alt="Assist Me Now Logo"
+                width={200}
+                height={150}
+                priority
+              />
+            </div>
+            <h2 className="mt-4 text-center text-3xl font-extrabold text-gray-900">
               Account Confirmed
             </h2>
             <p className="mt-2 text-center text-sm text-gray-600">
@@ -90,7 +100,7 @@ const ConfirmPage: React.FC = () => {
             <div>
               <Link
                 href="/auth/login"
-                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-[#003A5D] hover:bg-[#00304d] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#003A5D]"
               >
                 Go to Login
               </Link>
@@ -105,7 +115,16 @@ const ConfirmPage: React.FC = () => {
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8">
         <div>
-          <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+          <div className="flex justify-center">
+            <Image
+              src="/images/assist-me-now-logo.png"
+              alt="Assist Me Now Logo"
+              width={200}
+              height={150}
+              priority
+            />
+          </div>
+          <h2 className="mt-4 text-center text-3xl font-extrabold text-gray-900">
             Verify your account
           </h2>
           <p className="mt-2 text-center text-sm text-gray-600">
@@ -170,7 +189,7 @@ const ConfirmPage: React.FC = () => {
             <button
               type="submit"
               disabled={isLoading}
-              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:bg-blue-300"
+              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-[#003A5D] hover:bg-[#00304d] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#003A5D] disabled:bg-[#6a8ea3]"
             >
               {isLoading ? (
                 <span className="absolute left-0 inset-y-0 flex items-center pl-3">
@@ -203,7 +222,7 @@ const ConfirmPage: React.FC = () => {
         <div className="text-center mt-4">
           <Link
             href="/auth/login"
-            className="font-medium text-blue-600 hover:text-blue-500"
+            className="font-medium text-[#003A5D] hover:text-[#00304d]"
           >
             Back to login
           </Link>

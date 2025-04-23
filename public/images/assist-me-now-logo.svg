@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <g>
+    <!-- Shield background -->
+    <path d="M275 150 L275 450 L400 500 L525 450 L525 150 Z" fill="#003A5D"/>
+    
+    <!-- Person figure -->
+    <circle cx="400" cy="250" r="40" fill="white"/>
+    <path d="M320 350 C320 300, 480 300, 480 350 L450 400 L400 450 L350 400 Z" fill="white"/>
+    
+    <!-- Basket with heart -->
+    <path d="M350 400 L350 450 L450 450 L450 400 Z" fill="white"/>
+    <path d="M400 415 C410 405, 425 420, 400 435 C375 420, 390 405, 400 415 Z" fill="#003A5D"/>
+  </g>
+  
+  <!-- Text -->
+  <g transform="translate(550, 350)">
+    <text font-family="Arial, sans-serif" font-weight="bold" font-size="80" fill="#003A5D">
+      <tspan x="0" y="0">ASSIST</tspan>
+      <tspan x="0" y="80">ME</tspan>
+      <tspan x="0" y="160">NOW</tspan>
+    </text>
+  </g>
+  
+  <!-- Tagline -->
+  <g transform="translate(400, 540)">
+    <text font-family="Arial, sans-serif" font-weight="bold" font-size="24" fill="#000000" text-anchor="middle">
+      <tspan x="0" y="0">COMMUNITY-CRIME AWARENESS</tspan>
+      <tspan x="0" y="30">FOOD SECURITY • CRIME PREVENTION</tspan>
+    </text>
+  </g>
+</svg>
